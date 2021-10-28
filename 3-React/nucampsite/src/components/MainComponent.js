@@ -8,7 +8,7 @@ import Contact from "./ContactComponent";
 import About from "./AboutComponent";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-
+import { addComment, fetchCampsites } from "../redux/ActionCreators";
 
 const mapStateToProps = (state) => {
   return {
@@ -18,14 +18,27 @@ const mapStateToProps = (state) => {
     promotions: state.promotions,
   };
 };
+
+const mapDispatchToProps = {
+  addComment: (campsiteId, rating, author, text) =>
+    addComment(campsiteId, rating, author, text),
+  fetchCampsites: () => fetchCampsites(),
+};
 class Main extends Component {
+  componentDidMount() {
+    this.props.fetchCampsites();
+  }
   render() {
     const HomePage = () => {
       return (
         <Home
           campsite={
-            this.props.campsites.filter((campsite) => campsite.featured)[0]
+            this.props.campsites.campsites.filter(
+              (campsite) => campsite.featured
+            )[0]
           }
+          campsitesLoading={this.props.campsites.isLoading}
+          campsitesErrMess={this.props.campsites.errMess}
           promotion={
             this.props.promotions.filter((promotion) => promotion.featured)[0]
           }
@@ -33,17 +46,21 @@ class Main extends Component {
         />
       );
     };
+
     const CampsiteWithId = ({ match }) => {
       return (
         <CampsiteInfo
           campsite={
-            this.props.campsites.filter(
+            this.props.campsites.campsites.filter(
               (campsite) => campsite.id === +match.params.campsiteId
             )[0]
           }
+          isLoading={this.props.campsites.isLoading}
+          errMess={this.props.campsites.errMess}
           comments={this.props.comments.filter(
             (comment) => comment.campsiteId === +match.params.campsiteId
           )}
+          addComment={this.props.addComment}
         />
       );
     };
@@ -52,7 +69,7 @@ class Main extends Component {
       <div>
         <Header />
         <Switch>
-          <Route path="/home" component={HomePage} />
+          <Route path="/home" component={HomePage} />{" "}
           <Route
             exact
             path="/aboutus"
@@ -63,14 +80,14 @@ class Main extends Component {
             path="/directory"
             render={() => <Directory campsites={this.props.campsites} />}
           />
-          <Route path="/directory/:campsiteId" component={CampsiteWithId} />
-          <Route exact path="/contactus" component={Contact} />
+          <Route path="/directory/:campsiteId" component={CampsiteWithId} />{" "}
+          <Route exact path="/contactus" component={Contact} />{" "}
           <Redirect to="/home" />
-        </Switch>
+        </Switch>{" "}
         <Footer />
       </div>
     );
   }
 }
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
