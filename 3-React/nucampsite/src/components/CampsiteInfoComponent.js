@@ -11,7 +11,6 @@ import {
   ModalHeader,
   ModalBody,
   Label,
-  Form,
 } from "reactstrap";
 import { Control, LocalForm, Errors } from "react-redux-form";
 import { Link } from "react-router-dom";
@@ -22,6 +21,7 @@ import { FadeTransform, Fade, Stagger } from "react-animation-components";
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !val || val.length <= len;
 const minLength = (len) => (val) => val && val.length >= len;
+/* eslint-disable */
 class CommentForm extends Component {
   constructor(props) {
     super(props);
