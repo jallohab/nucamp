@@ -3,9 +3,5 @@ import { View } from "react-native";
 import Main from "./components/MainComponent";
 
 export default function App() {
-  return (
-    <View>
-      <Main />
-    </View>
-  );
+  return <Main />;
 }
