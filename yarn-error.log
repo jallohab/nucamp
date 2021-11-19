@@ -1,63 +1,28 @@
 Arguments: 
-  /usr/local/Cellar/node/17.0.1/bin/node /usr/local/Cellar/yarn/1.22.17/libexec/bin/yarn.js add react-navigation-drawe
+  /usr/local/Cellar/node@14/14.18.1/bin/node /usr/local/Cellar/yarn/1.22.17/libexec/bin/yarn.js install
 
 PATH: 
-  /user/local/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/abdulai/miniconda3/bin:/Users/abdulai/Library/Android/sdk/tools:/Users/abdulai/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/abdulai/Dropbox/CSCI\ 1200/DrMemory-MacOS-1.11.0-2/bin64 :/Library/TeX/texbin:/usr/local/go/bin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS:/user/local/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/abdulai/miniconda3/bin:/Users/abdulai/Library/Android/sdk/tools:/Users/abdulai/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/sbin:/Users/abdulai/Documents/flutter/bin:/Users/abdulai/Documents/flutter/bin
+  /usr/local/opt/node@14/bin:/user/local/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/abdulai/miniconda3/bin:/Users/abdulai/Library/Android/sdk/tools:/Users/abdulai/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/abdulai/Dropbox/CSCI\ 1200/DrMemory-MacOS-1.11.0-2/bin64 :/Library/TeX/texbin:/usr/local/go/bin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/opt/node@14/bin:/user/local/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/abdulai/miniconda3/bin:/Users/abdulai/Library/Android/sdk/tools:/Users/abdulai/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/sbin:/Users/abdulai/Documents/flutter/bin:/Users/abdulai/Documents/flutter/bin
 
 Yarn version: 
   1.22.17
 
 Node version: 
-  17.0.1
+  14.18.1
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/react-navigation-drawe: Not found
-      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.17/libexec/lib/cli.js:67029:18)
-      at Request.self.callback (/usr/local/Cellar/yarn/1.22.17/libexec/lib/cli.js:140883:22)
-      at Request.emit (node:events:390:28)
-      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.17/libexec/lib/cli.js:141855:10)
-      at Request.emit (node:events:390:28)
-      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.17/libexec/lib/cli.js:141777:12)
-      at Object.onceWrapper (node:events:509:28)
-      at IncomingMessage.emit (node:events:402:35)
-      at endReadableNT (node:internal/streams/readable:1340:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  SyntaxError: /Users/abdulai/Documents/NucampFolder/4-React-Native.nosync/nucampsite/package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.17/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.17/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.17/libexec/lib/cli.js:321:13
 
 npm manifest: 
-  {
-    "main": "node_modules/expo/AppEntry.js",
-    "scripts": {
-      "start": "expo start",
-      "android": "expo start --android",
-      "ios": "expo start --ios",
-      "web": "expo start --web",
-      "eject": "expo eject"
-    },
-    "dependencies": {
-      "@react-native-community/masked-view": "0.1.10",
-      "expo": "41",
-      "expo-constants": "~10.1.3",
-      "expo-status-bar": "~1.1.0",
-      "react": "16.13.1",
-      "react-dom": "16.13.1",
-      "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-      "react-native-elements": "2.2.1",
-      "react-native-gesture-handler": "~1.10.2",
-      "react-native-reanimated": "~2.1.0",
-      "react-native-safe-area-context": "3.2.0",
-      "react-native-screens": "~3.0.0",
-      "react-native-web": "0.17.1",
-      "react-navigation": "4",
-      "react-navigation-stack": "^1.10.3"
-    },
-    "devDependencies": {
-      "@babel/core": "^7.12.9"
-    },
-    "private": true
-  }
+  
 
 yarn manifest: 
   No manifest
@@ -5404,6 +5369,11 @@ Lockfile:
       stacktrace-parser "^0.1.3"
       use-subscription "^1.0.0"
       whatwg-fetch "^3.0.0"
+  
+  react-navigation-drawer@^2.7.1:
+    version "2.7.1"
+    resolved "https://registry.yarnpkg.com/react-navigation-drawer/-/react-navigation-drawer-2.7.1.tgz#b025be11f612e8215f15f9f605851d281606fe82"
+    integrity sha512-W36XDl+Ts5uGNr6Ryt1xGrQ5JTeddPmvR31bNX7o6Oo7OsdPZ3b1+oMDoRClGca0d6Ggo7btIqiWUsUshm+p/g==
   
   react-navigation-stack@^1.10.3:
     version "1.10.3"
